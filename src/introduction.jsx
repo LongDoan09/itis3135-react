@@ -5,11 +5,8 @@ export default function Introduction() {
         <h2>Long Doan || Loyal Donkey</h2>
   
         <figure>
-          <img
-            src="images/DSC00591.JPEG"
-            alt="Long Doan"
-            style={{ width: "25%" }}
-          />
+        <img src="/itis3135-react/images/DSC00591.JPEG" alt="Long Doan" />
+
           <figcaption>Night at the beach</figcaption>
         </figure>
   
