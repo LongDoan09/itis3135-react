@@ -5,10 +5,11 @@ function Header() {
     <header>
       <h1>Long Doan's Loyal Donkey || ITIS 3135</h1>
       <nav>
-        <Link to="/">Home</Link> ||
-        <Link to="/introduction">Introduction</Link> ||
-        <Link to="/contract">Contract</Link> ||
-        <Link to="/student">Students</Link>
+        <a href="/itis3135-react/">Home</a> ||
+        <a href="/itis3135-react/introduction">Introduction</a> ||
+        <a href="/itis3135-react/contract">Contract</a> ||
+        <a href="/itis3135-react/student">Students</a>
+
       </nav>
     </header>
   );

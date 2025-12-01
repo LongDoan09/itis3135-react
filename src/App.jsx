@@ -13,11 +13,12 @@ function App() {
 
       <main>
         <Routes>
-          <Route path="/itis3135-react/" element={<Home />} />
-          <Route path="/itis3135-react/introduction" element={<Introduction />} />
-          <Route path="/itis3135-react/contract" element={<Contract />} />
-          <Route path="/itis3135-react/student" element={<Student />} />
+          <Route path="/" element={<Home />} />
+          <Route path="introduction" element={<Introduction />} />
+          <Route path="contract" element={<Contract />} />
+          <Route path="student" element={<Student />} />
         </Routes>
+
       </main>
 
       <Footer />
