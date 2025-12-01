@@ -8,7 +8,7 @@ function Header() {
         <Link to="/">Home</Link> ||
         <Link to="/introduction">Introduction</Link> ||
         <Link to="/contract">Contract</Link> ||
-        <Link to="/itis3135-react/student">Students</Link>
+        <Link to="/student">Students</Link>
       </nav>
     </header>
   );
