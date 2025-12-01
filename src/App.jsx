@@ -16,9 +16,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/introduction" element={<Introduction />} />
           <Route path="/contract" element={<Contract />} />
-          
-          {/* ⭐ ADD THIS ROUTE */}
-          <Route path="/students" element={<Students />} />
+          <Route path="/itis3135-react/student" element={<Students />} />
         </Routes>
       </main>
 
