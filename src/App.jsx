@@ -4,7 +4,7 @@ import Footer from "./footer.jsx";
 import Home from "./home.jsx";
 import Introduction from "./introduction.jsx";
 import Contract from "./contract.jsx";
-import Students from "./student.jsx";   // ⭐ ADD THIS LINE
+import Student from "./student.jsx";
 
 function App() {
   return (
@@ -13,10 +13,10 @@ function App() {
 
       <main>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/introduction" element={<Introduction />} />
-          <Route path="/contract" element={<Contract />} />
-          <Route path="/itis3135-react/student" element={<Students />} />
+          <Route path="/itis3135-react/" element={<Home />} />
+          <Route path="/itis3135-react/introduction" element={<Introduction />} />
+          <Route path="/itis3135-react/contract" element={<Contract />} />
+          <Route path="/itis3135-react/student" element={<Student />} />
         </Routes>
       </main>
 

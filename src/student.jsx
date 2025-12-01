@@ -1,68 +1,55 @@
 import { useEffect, useState } from "react";
 
-export default function Students() {
+export default function Student() {
   const [students, setStudents] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     fetch("https://dvonb.xyz/api/2025-fall/itis-3135/students?full=1")
-      .then((response) => response.json())
+      .then((res) => res.json())
       .then((data) => {
         setStudents(data);
+        setLoading(false);
+      })
+      .catch((err) => {
+        console.error("Fetch error:", err);
         setLoading(false);
       });
   }, []);
 
-  if (loading) {
-    return <h2 style={{ textAlign: "center" }}>Loading student data…</h2>;
-  }
-
   return (
     <main>
-      <h2>ITIS 3135 – Student Introductions</h2>
+      <h2>Students</h2>
 
-      {students.map((student) => (
-        <div
-          key={student.email}
-          style={{
-            background: "#ffe4e4",
-            padding: "15px",
-            margin: "10px auto",
-            width: "80%",
-            borderRadius: "10px",
-          }}
-        >
-          <h3>{student.name}</h3>
-          <p><strong>Email:</strong> {student.email}</p>
+      {loading ? (
+        <p>Loading data...</p>
+      ) : (
+        students.map((s) => (
+          <div
+            key={s.email}
+            style={{
+              border: "1px solid black",
+              margin: "15px auto",
+              padding: "10px",
+              width: "80%",
+              background: "white",
+            }}
+          >
+            <h3>{s.name}</h3>
 
-          {student.image && (
-            <img
-              src={student.image}
-              alt={student.name}
-              style={{ width: "200px", borderRadius: "10px" }}
-            />
-          )}
+            {s.media?.image && (
+              <img
+                src={s.media.image}
+                alt={s.name}
+                style={{ width: "150px", borderRadius: "10px" }}
+              />
+            )}
 
-          <p><strong>Background:</strong> {student.background}</p>
-          <p><strong>Professional:</strong> {student.professional}</p>
-          <p><strong>Academic:</strong> {student.academic}</p>
-
-          {student.courses && (
-            <div>
-              <strong>Courses:</strong>
-              <ul>
-                {student.courses.map((c, index) => (
-                  <li key={index}>{c}</li>
-                ))}
-              </ul>
-            </div>
-          )}
-
-          {student.quote && (
-            <p><strong>Favorite Quote:</strong> "{student.quote}"</p>
-          )}
-        </div>
-      ))}
+            <p><b>Email:</b> {s.email}</p>
+            <p><b>Major:</b> {s.major}</p>
+          </div>
+        ))
+      )}
     </main>
   );
 }
