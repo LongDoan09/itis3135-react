@@ -5,7 +5,6 @@ import Home from "./home.jsx";
 import Introduction from "./introduction.jsx";
 import Contract from "./contract.jsx";
 
-
 function App() {
   return (
     <>
@@ -13,12 +12,10 @@ function App() {
 
       <main>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="introduction" element={<Introduction />} />
-          <Route path="contract" element={<Contract />} />
-          
+          <Route path="/itis3135-react/" element={<Home />} />
+          <Route path="/itis3135-react/introduction" element={<Introduction />} />
+          <Route path="/itis3135-react/contract" element={<Contract />} />
         </Routes>
-
       </main>
 
       <Footer />
@@ -27,4 +24,5 @@ function App() {
 }
 
 export default App;
+
 
