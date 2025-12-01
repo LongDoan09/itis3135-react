@@ -8,7 +8,7 @@ function Header() {
         <a href="/itis3135-react/">Home</a> ||
         <a href="/itis3135-react/introduction">Introduction</a> ||
         <a href="/itis3135-react/contract">Contract</a> ||
-        <a href="/itis3135-react/student">Students</a>
+     
 
       </nav>
     </header>

@@ -4,7 +4,7 @@ import Footer from "./footer.jsx";
 import Home from "./home.jsx";
 import Introduction from "./introduction.jsx";
 import Contract from "./contract.jsx";
-import Student from "./student.jsx";
+
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="introduction" element={<Introduction />} />
           <Route path="contract" element={<Contract />} />
-          <Route path="student" element={<Student />} />
+          
         </Routes>
 
       </main>
