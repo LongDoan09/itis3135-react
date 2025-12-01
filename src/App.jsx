@@ -4,6 +4,7 @@ import Footer from "./footer.jsx";
 import Home from "./home.jsx";
 import Introduction from "./introduction.jsx";
 import Contract from "./contract.jsx";
+import Students from "./student.jsx";   // ⭐ ADD THIS LINE
 
 function App() {
   return (
@@ -15,6 +16,9 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/introduction" element={<Introduction />} />
           <Route path="/contract" element={<Contract />} />
+          
+          {/* ⭐ ADD THIS ROUTE */}
+          <Route path="/students" element={<Students />} />
         </Routes>
       </main>
 
